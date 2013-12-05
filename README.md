@@ -23,5 +23,5 @@ require('touch-polyfill');
 It is then possible to register for touch events using standard event registration:
 
 ```javascript
-document.body.addEventListener('touchstart', function() { alert('touched!'); });
+document.body.addEventListener('touchstart', function() { alert('touched!'); }, false);
 ```
