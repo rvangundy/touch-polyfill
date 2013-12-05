@@ -1,6 +1,6 @@
 {
   "name": "touch-polyfill",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "touch-polyfill.js",
   "devDependencies": {
     "grunt"                 : "~0.4.1",
