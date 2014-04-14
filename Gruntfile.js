@@ -38,6 +38,11 @@ module.exports = function (grunt) {
                 options : {
                     debug : true
                 }
+            },
+            build: {
+                src : ['src/touch-polyfill.js'],
+                dest : 'touch-polyfill.js',
+                standalone: 'touch-polyfill'
             }
         },
         bump: {
@@ -78,7 +83,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('default', [
         'jshint',
-        'browserify'
+        'browserify:build'
     ]);
 
     grunt.registerTask('release', [
