@@ -200,7 +200,11 @@ var createTouchEvent = function(e, name) {
     );
 
     event.changedTouches = CHANGED_TOUCHES;
-    event.touches        = TOUCH_LIST;
+    event.touches        = new Proxy(TOUCH_LIST, {
+        get: function(target, prop) {
+            return target._items[prop];
+        }
+    });
     event.targetTouches  = TARGET_TOUCHES;
 
     return event;
